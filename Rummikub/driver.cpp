@@ -144,12 +144,12 @@ void test0() // solvable
     RummiKub rks;
     std::vector< Tile > tiles;
 
-    tiles.push_back( {1,Red} );    // run
-    tiles.push_back( {2,Red} );
-    tiles.push_back( {3,Red} );
-    tiles.push_back( {3,Red} );
-    tiles.push_back( {4,Red} );
-    tiles.push_back( {5,Red} );
+    tiles.push_back( {1,kRed} );    // run
+    tiles.push_back( {2,kRed} );
+    tiles.push_back( {3,kRed} );
+    tiles.push_back( {3,kRed} );
+    tiles.push_back( {4,kRed} );
+    tiles.push_back( {5,kRed} );
 
     std::random_shuffle( tiles.begin(), tiles.end() );
    
@@ -170,19 +170,19 @@ void test1() // solvable
     RummiKub rks;
     std::vector< Tile > tiles;
 
-    tiles.push_back( {6,Yellow} ); // run
-    tiles.push_back( {8,Yellow} );
-    tiles.push_back( {7,Yellow} );
-    tiles.push_back( {5,Red} );    // group
-    tiles.push_back( {5,Blue} );
-    tiles.push_back( {5,Green} );
-    tiles.push_back( {5,Yellow} );
-    tiles.push_back( {1,Red} );    // run
-    tiles.push_back( {2,Red} );
-    tiles.push_back( {3,Red} );
-    tiles.push_back( {3,Red} );
-    tiles.push_back( {4,Red} );
-    tiles.push_back( {5,Red} );
+    tiles.push_back( {6,kYellow} ); // run
+    tiles.push_back( {8,kYellow} );
+    tiles.push_back( {7,kYellow} );
+    tiles.push_back( {5,kRed} );    // group
+    tiles.push_back( {5,kBlue} );
+    tiles.push_back( {5,kGreen} );
+    tiles.push_back( {5,kYellow} );
+    tiles.push_back( {1,kRed} );    // run
+    tiles.push_back( {2,kRed} );
+    tiles.push_back( {3,kRed} );
+    tiles.push_back( {3,kRed} );
+    tiles.push_back( {4,kRed} );
+    tiles.push_back( {5,kRed} );
 
     std::random_shuffle( tiles.begin(), tiles.end() );
    
@@ -203,14 +203,14 @@ void test2( )
     RummiKub rks;
     std::vector< Tile > tiles;
 
-    tiles.push_back( {6,Yellow} );
-    tiles.push_back( {8,Yellow} );
-    tiles.push_back( {5,Green} );
-    tiles.push_back( {5,Yellow} );
-    tiles.push_back( {1,Red} );
-    tiles.push_back( {2,Red} );
-    tiles.push_back( {4,Red} );
-    tiles.push_back( {5,Red} );
+    tiles.push_back( {6,kYellow} );
+    tiles.push_back( {8,kYellow} );
+    tiles.push_back( {5,kGreen} );
+    tiles.push_back( {5,kYellow} );
+    tiles.push_back( {1,kRed} );
+    tiles.push_back( {2,kRed} );
+    tiles.push_back( {4,kRed} );
+    tiles.push_back( {5,kRed} );
 
     std::random_shuffle( tiles.begin(), tiles.end() );
    
@@ -251,16 +251,16 @@ GenerateRandomSolvable(
         int denomination    = dis_group_denomination( gen );
         int length          = dis_group_length( gen ); // 3 or 4
         if( length == 4 ) { // all 4 colors
-            tiles.push_back( {denomination,Red} );
-            tiles.push_back( {denomination,Green} );
-            tiles.push_back( {denomination,Blue} );
-            tiles.push_back( {denomination,Yellow} );
+            tiles.push_back( {denomination,kRed} );
+            tiles.push_back( {denomination,kGreen} );
+            tiles.push_back( {denomination,kBlue} );
+            tiles.push_back( {denomination,kYellow} );
         } else { // one color to skip
             int color_to_skip = dis_rand( gen ) % 4;
-            if ( Red    != color_to_skip ) { tiles.push_back( {denomination,Red} );     }
-            if ( Green  != color_to_skip ) { tiles.push_back( {denomination,Green} );  }
-            if ( Blue   != color_to_skip ) { tiles.push_back( {denomination,Blue} );    }
-            if ( Yellow != color_to_skip ) { tiles.push_back( {denomination,Yellow} );  }
+            if ( kRed    != color_to_skip ) { tiles.push_back( {denomination,kRed} );     }
+            if ( kGreen  != color_to_skip ) { tiles.push_back( {denomination,kGreen} );  }
+            if ( kBlue   != color_to_skip ) { tiles.push_back( {denomination,kBlue} );    }
+            if ( kYellow != color_to_skip ) { tiles.push_back( {denomination,kYellow} );  }
         }
     }
     //create runs

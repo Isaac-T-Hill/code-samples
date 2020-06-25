@@ -1,3 +1,16 @@
+/******************************************************************************/
+/*!
+\file   semaphore.cpp
+\author Isaac Hill
+\par    email: Isaac.Hill@digipen.edu
+\par    DigiPen login: Isaac.Hill
+\par    Course: CS355
+\par    Assignment #2
+\date   2/11/2020
+\brief
+This is the Implementation file for a semaphore using mutexes
+*/
+/******************************************************************************/
 
 #include "semaphore.h"
 
