@@ -141,7 +141,6 @@ run(std::vector< std::tuple<int, int> > initial_population, int num_iter, int ma
 	sem_init(&barrier, 0, 0);
 	sem_init(&barrier2, 0, 1);
 
-
 	// storage for arguments
 	Arguments* args = new Arguments[size];
 

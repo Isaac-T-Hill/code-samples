@@ -49,7 +49,6 @@ bool Column::Update(Column* col)
   return false;
 }
 
-
 /******************************************************************************/
 /*!
 Creates a map from the text of given file
@@ -92,7 +91,6 @@ World::World(char const* filename)
 
     grid_[i % width_].push_back(new Column(colHeight, edge));
   }
-
 }
 
 /******************************************************************************/

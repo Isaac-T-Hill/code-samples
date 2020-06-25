@@ -49,33 +49,33 @@ std::ostream& operator<<(std::ostream& os, Tile const& t)
 }
 
 class RummiKub {
-    public:
-      RummiKub(); // empty hand
-      void Add( Tile const& , unsigned add = 1); // add a tile to hand
-
-      bool Solve(); // solve
-
-      // get solution - groups_
-      std::vector< std::vector< Tile > > GetGroups() const;
-	  
-      // get solution - runs
-      std::vector< std::vector< Tile > > GetRuns() const;
-
-    private:
-	  // Helper Functions
-      std::pair<int, std::pair<int, int>> add2group(Tile, int);
-      std::pair<int, std::pair<int, int>> add2run(Tile, int);
-      std::pair<int, std::pair<int, int>> addgroup(Tile);
-      std::pair<int, std::pair<int, int>> addrun(Tile);
-      bool CheckSolved();
-	  
-	  // Member variables
-	  std::vector<std::vector<Tile>> groups_final_;
-	  std::vector<std::vector<Tile>> runs_final_;
-      std::vector<std::vector<Tile>> groups_;
-      std::vector<std::vector<Tile>> runs_;
-	  std::vector<Tile> hand_;
-      unsigned num_tiles_;
+  public:
+    RummiKub(); // empty hand
+    void Add( Tile const& , unsigned add = 1); // add a tile to hand
+    
+    bool Solve(); // solve
+    
+    // get solution - groups_
+    std::vector< std::vector< Tile > > GetGroups() const;
+    
+    // get solution - runs
+    std::vector< std::vector< Tile > > GetRuns() const;
+  
+  private:
+    // Helper Functions
+    std::pair<int, std::pair<int, int>> add2group(Tile, int);
+    std::pair<int, std::pair<int, int>> add2run(Tile, int);
+    std::pair<int, std::pair<int, int>> addgroup(Tile);
+    std::pair<int, std::pair<int, int>> addrun(Tile);
+    bool CheckSolved();
+  
+    // Member variables
+    std::vector<std::vector<Tile>> groups_final_;
+    std::vector<std::vector<Tile>> runs_final_;
+    std::vector<std::vector<Tile>> groups_;
+    std::vector<std::vector<Tile>> runs_;
+    std::vector<Tile> hand_;
+    unsigned num_tiles_;
 };
 
 #include "rummikub.cpp"
